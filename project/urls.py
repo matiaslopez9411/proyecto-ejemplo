@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ejemplo.views import index #asigna la función ejemplo
+from ejemplo.views import index, saludar_a, buscar, mostrar_familiares #asigna la función ejemplo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludar/', index), # ESTA ES LA ruta de la NUEVA FUNCTION
+    path('saludar-a/<nombre>/', saludar_a), #El <nombre> permte definir a la variable desde la URL
+    path('buscar/', buscar),
+    path('mi-familia/', mostrar_familiares), #vista para el modelo familiares
 ]
