@@ -27,4 +27,4 @@ def buscar(request): #nos permite agregar un request por un query (búsqueda)
 
 def mostrar_familiares(request):
   lista_familiares = Familiar.objects.all()
-  return render(request, "ejemplo/familiares.html", {"lista_familiares": lista_familiares})
+  return render(request, "ejemplo/familiares.html", {"lista_familiares": lista_familiares}) #este contexto va al html, seria la lista que lee con el for
