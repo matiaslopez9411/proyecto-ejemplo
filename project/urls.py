@@ -23,5 +23,5 @@ urlpatterns = [
     path('saludar-a/<nombre>/', saludar_a), #El <nombre> permte definir a la variable desde la URL
     path('buscar/', buscar),
     path('mi-familia/', mostrar_familiares), #vista para el modelo familiares
-    path('mi-familia/buscar', Buscarfamiliar.as_view())
+    path('mi-familia/buscar/', Buscarfamiliar.as_view())
 ]
